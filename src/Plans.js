@@ -8,7 +8,8 @@ const Plans = () => {
         <div className="plans">
           <Header className="headerClass" />
           <PlanContainer />
-          <div class="plansBg"></div>
+          
+          <div className="plansBg"></div>
         </div>
       );
 }
