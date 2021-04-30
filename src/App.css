@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+.headerCls {
+  position: fixed;
+  left: 3.67%;
+  right: 2.42%;
+  top: 3.06%;
+  bottom: 90.42%;
+  vertical-align: middle;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  position: absolute;
+  top: 17.02%;
+  bottom: 20.15%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+.nav-menu  ul {
+  padding-left: 80%;
+  padding-top: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
+ul > li {
+  padding-right: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul > li  a {
+  font-family: Oswald;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: unset;
+  color: #000000;
+  font-weight: 500;
+}
+
+.bodyTitle {
+  position: absolute;
+  left: 27.81%;
+  right: 23.67%;
+  top: 24.17%;
+  bottom: 69.31%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 47px;
+}
+
+.bodysubTitle {
+
+  position: absolute;
+  left: 41.88%;
+  right: 38.98%;
+  top: 32.5%;
+  bottom: 64.86%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #707070;
+
+}
+
+.illustration1 {
+  background-image: url('../public/backfull.svg');
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 61%;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -3;
+}
+
+.insuranceCard {
+  position: absolute;
+  width: 259px;
+  height: 275px;
+  left: 30%;
+  top: 40%;
+  cursor: pointer;
+}
+
+.insuranceCard div {
+  position: absolute;
+  left: 0%;
+  right: -1.03%;
+  top: 0%;
+  bottom: 0.49%;
+
+  background: #FFFFFF;
+  opacity: 0.8;
+  box-shadow: 2px 9px 21px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+.insuranceCard .type {
+  position: absolute;
+  left: 8.25%;
+  right: 50%;
+  top: 70%;
+  bottom: 15%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 37px;
+  color: #424149;
+}
+
+.insuranceCard .subText {
+  position: absolute;
+  left: 8.25%;
+  right: 46.91%;
+  top: 65.53%;
+  bottom: 25.73%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #757575;
+}
+
+.typeLogo {
+  position: absolute;
+  width: 54.36px;
+  height: 54.31px;
+  left: 21px;
+  top: 18.69px;
+
+}
+
+.searchClass {
+  position: absolute;
+  right: 400px;
+  /* height: 47px;
+  width: 473px;
+  background: #F8F8F8;
+  border-radius: 30px;
+  border-color: #F8F8F8; */
+}
+.searchClass .mr-sm-2 {
+  height: 47px;
+  width: 473px;
+  background: #F8F8FE;
+  border-radius: 30px;
+  border-color: #F8F8F8;
+  border-style: unset; 
+
+}
+
+::placeholder {
+  text-align: center;
+  font-weight: 500;
+
+  
+}
+
+.quoteDetails {
+  padding: 300px 0 0 200px;
+  width: 1000px;
+  height: 243px;
+}
+
+.originSelect {
+  position: absolute;
+  width: 338px;
+  height: 55px;
+  left: 200px;
+}
+.travellersCount {
+  position: absolute;
+  width: 338px;
+  height: 55px;
+  left: 799px;
+
+}
+ select {
+  height: 27px;
+  width: 338px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 30px;
+  color: #757575;
+  font-weight: bold;
+  border: unset;
+  border-bottom: 2px solid rgba(196, 196, 196, 0.6);;
+
+}
+
+label {
+  position: absolute;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.plansBg {
+  background-image: url('../public/plansPageBg.svg');
+  position: fixed;
+  width: 284.79px;
+  height: 372.56px;
+  right: 100px;
+  top: 260.44px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -3;
 }
