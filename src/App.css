@@ -102,6 +102,11 @@ ul > li  a {
   cursor: pointer;
 }
 
+.insuranceCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(117,117,117,0.15);
+  
+  border-radius: 10px;
+}
 .insuranceCard div {
   position: absolute;
   left: 0%;
@@ -111,11 +116,13 @@ ul > li  a {
 
   background: #FFFFFF;
   opacity: 0.8;
-  box-shadow: 2px 9px 21px rgba(0, 0, 0, 0.16);
+  box-shadow: 2px 9px 21px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
   border-radius: 10px;
 }
-
+.insuranceCard:hover .type {
+   font-weight: bolder;
+}
 .insuranceCard .type {
   position: absolute;
   left: 8.25%;
@@ -124,7 +131,7 @@ ul > li  a {
   bottom: 15%;
   font-family: Oswald;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 25px;
   line-height: 37px;
   color: #424149;
