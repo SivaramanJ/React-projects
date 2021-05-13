@@ -6,8 +6,10 @@
   bottom: 90.42%;
   vertical-align: middle;
 }
-body {
-  margin: auto;
+
+html, body {
+  height: 100%;
+  width: 100%;
 }
 #root {
   position: absolute;
@@ -188,7 +190,7 @@ ul > li  a {
 
 .quoteDetails {
   padding: 300px 0 0 200px;
-  width: 1000px;
+  width: 800px;
   height: 500px;
   display: inline-block;
 }
@@ -306,4 +308,3 @@ input[type=date] {
   font-size: 16px;
   color: #757575;
 }
-

@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import CTA from "./CTA";
 import Styled from "styled-components";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import Button from '@material-ui/core/Button';
 
-const PlansContainer = () => {
+const PlansContainer = (props) => {
 
     const [country, setCountry] = useState("");
     const [travellersCnt, setTravellersCnt] = useState("");
@@ -23,6 +25,11 @@ const PlansContainer = () => {
         name === 'travellerType' && setTravellerType(name => value);
     }
 
+    const nextClick = (event) => { 
+        event.preventDefault();
+        console.log('siva')
+        props.nextStep();
+    }
     return (
         <div>
             <form className="quoteDetails">
@@ -60,7 +67,7 @@ const PlansContainer = () => {
                 <div className="datePicker">
                     <label>TRAVEL DURATION</label>
                     <div>
-                        <input type="date" id="stDay" name="stDate" value={stDate} onChange={handleChange}/>
+                        <input type="date" id="stDay" name="stDate" placeholder="Start Date" value={stDate} onChange={handleChange}/>
                         <span>to</span>
                         <input type="date" id="endDay" name="endDate" value={endDate} onChange={handleChange}/>
 
@@ -115,19 +122,24 @@ const PlansContainer = () => {
                     </span>
                 </div>
             </form>
-            <CtaBlock>
-                <CTA innerTitle="next" />
-            </CtaBlock>
+            
+            <Button style={styles.root} onClick={nextClick}>Next</Button>
+            
+            
         </div>
     )
 }
 
-const CtaBlock = Styled.div`
-        position: absolute;
-        width: 424.05px;
-        height: 54px;
-        left: 1600px;
-        bottom: 170px;
-    `;
+let styles = {
+    root: {
+        height: '45px',
+        backgroundColor: '#6C63FF', 
+        width: '171px',
+        borderRadius: '5px',
+        margin: '800px 180px 0 0',
+        float: 'right',
+        color: 'white',
+    }
+}
 
 export default PlansContainer;

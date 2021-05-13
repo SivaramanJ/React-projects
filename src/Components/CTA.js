@@ -5,21 +5,19 @@ const CallToAction = Styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 54px;
-    margin:20px;
+    height: 45px;
     background-color: #6C63FF; 
-    text-transform: uppercase;
     width: 171px;
     border-radius: 5px;
-    left: 59.66%
-    right: 0.01%;
+    margin: 800px 120px 0 0;
+    float: right;
     color: white
 `;
 
 const CTA = (props) => {
     return (
         <CallToAction >
-            <h2>{props.innerTitle}</h2>
+            <h3>{props.innerTitle}</h3>
         </CallToAction>
     )
 } 
