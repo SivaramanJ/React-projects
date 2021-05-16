@@ -45,7 +45,6 @@ class Plans extends React.Component {
           <div className="plans">
             <Header className="headerClass" />
             <ProductDetails nextStep ={ this.nextStep} prevStep = {this.prevStep}/>
-            <div className="plansBg"></div>
           </div>
         )
       case 3:
