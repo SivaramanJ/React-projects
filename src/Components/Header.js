@@ -7,7 +7,7 @@ const Header = () => {
 
     return(
         <div className="headerCls">
-           <p className="logo"> Etisalat Insurance </p>
+           <p className="logo"> Travel Insurance </p>
            <nav className='nav-menu'>
                 <ul className='nav-menu-items' >
                     

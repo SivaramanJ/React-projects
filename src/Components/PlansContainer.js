@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import CTA from "./CTA";
 import Styled from "styled-components";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import Button from '@material-ui/core/Button';
+
+import CTAComps from "./CTAComps";
 
 const PlansContainer = (props) => {
 
@@ -25,11 +25,6 @@ const PlansContainer = (props) => {
         name === 'travellerType' && setTravellerType(name => value);
     }
 
-    const nextClick = (event) => { 
-        event.preventDefault();
-        console.log('siva')
-        props.nextStep();
-    }
     return (
         <div>
             <form className="quoteDetails">
@@ -122,24 +117,10 @@ const PlansContainer = (props) => {
                     </span>
                 </div>
             </form>
-            
-            <Button style={styles.root} onClick={nextClick}>Next</Button>
-            
-            
+            <CTAComps nextStep = {props.nextStep} prevStep = {props.prevStep}/>
         </div>
     )
 }
 
-let styles = {
-    root: {
-        height: '45px',
-        backgroundColor: '#6C63FF', 
-        width: '171px',
-        borderRadius: '5px',
-        margin: '800px 180px 0 0',
-        float: 'right',
-        color: 'white',
-    }
-}
 
 export default PlansContainer;

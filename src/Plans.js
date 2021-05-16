@@ -35,23 +35,24 @@ class Plans extends React.Component {
         return(
           <div className="plans">
             <Header className="headerClass" />
-            <PlanContainer nextStep = {this.nextStep} />
+            <PlanContainer nextStep = {this.nextStep} prevStep = {this.prevStep}/>
             <div className="plansBg"></div>
           </div>
         );
-      case 2:
+      
+      case 2: 
         return (
           <div className="plans">
             <Header className="headerClass" />
-            <CustomerDetails nextStep ={this.nextStep} />
+            <ProductDetails nextStep ={ this.nextStep} prevStep = {this.prevStep}/>
             <div className="plansBg"></div>
           </div>
         )
-      case 3: 
+      case 3:
         return (
           <div className="plans">
             <Header className="headerClass" />
-            <ProductDetails nextStep ={ this.nextStep}/>
+            <CustomerDetails nextStep ={this.nextStep} prevStep = {this.prevStep}/>
             <div className="plansBg"></div>
           </div>
         )
@@ -59,7 +60,7 @@ class Plans extends React.Component {
         return (
           <div className="plans">
             <Header className="headerClass" />
-            <Payment />
+            <Payment nextStep ={ this.nextStep} prevStep = {this.prevStep} />
             <div className="plansBg"></div>
           </div>
         )
