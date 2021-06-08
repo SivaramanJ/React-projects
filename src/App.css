@@ -40,11 +40,11 @@ html, body {
   list-style-type: none;
 }
 
-ul > li {
+.nav-menu ul > li {
   padding-right: 60px;
 }
 
-ul > li  a {
+.nav-menu ul > li  a {
   font-family: Oswald;
   font-style: normal;
   font-size: 18px;
@@ -314,4 +314,4 @@ input[type=date] {
   border-top: 1px solid rgba(196, 196, 196, 0.3);
 
 }
-
+ul li:hover, li.home, li.plans { background-color: white;}

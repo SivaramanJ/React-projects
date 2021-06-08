@@ -4,15 +4,18 @@ import Styled from 'styled-components';
 import CTAComps from './CTAComps';
 import productLogo from "../../public/Inboundlogo.svg"
 import greenTick from "../../public/greenTick.svg"
+import tick from "../../public/Tick.png"
+import styled from 'styled-components';
 export class ProductDetails extends Component {
 
     productCont = Styled.div`
         width: 262px;
         height: 300px;
-        margin: 16% 0 0 8.5%;
-        padding-left: 5px;
+        margin: 16% 0 0 200px;
+        padding-left: 2px;
         flex-direction: row;
         justify-content: center; 
+        position: relative;
     `
     childCont = Styled.div`
         position: absolute;
@@ -27,10 +30,11 @@ export class ProductDetails extends Component {
         &:hover {
             box-shadow: 2px 9px 21px rgba(0, 0, 0, 0.2);
         }
+        
     `
     parentCont = Styled.div`
         display: flex;
-        position: absolute;
+        height: 1px;
         width: 100%;
     `
     productImg = Styled.img`
@@ -44,7 +48,6 @@ export class ProductDetails extends Component {
         padding-top: 40px;
         padding-left: 20px;
     `
-
     textSpan = Styled.span `
         padding-left: 10px;
         color: rgba(0, 0, 0, 0.6);
@@ -64,6 +67,13 @@ export class ProductDetails extends Component {
         padding: "5px 0 0 20px"
     }
 
+    selectedProduct = styled.img `
+         width: 54px;
+         height: 32px;
+        float: right;
+        margin: 10px 0 5px 0;
+    `
+
 
     render() {
         return (
@@ -71,7 +81,8 @@ export class ProductDetails extends Component {
                 <this.parentCont >
                     <this.productCont >  
                         <this.childCont > 
-                            <this.productImg src={productLogo} ></this.productImg> <br/>
+                            <this.productImg src={productLogo} ></this.productImg> 
+                            <br/>
                             <this.greenTickImg src={greenTick}></this.greenTickImg>
                             <this.textSpan>Trip Cancellation</this.textSpan><br />
                             <this.greenTickImg src={greenTick}></this.greenTickImg>
@@ -108,7 +119,7 @@ export class ProductDetails extends Component {
                             </div>
                         </this.childCont>
                     </this.productCont>
-                    <this.productCont >
+                    {/* <this.productCont >
                         <this.childCont>
                                 <this.productImg src={productLogo} ></this.productImg> <br/>
                                 <this.greenTickImg src={greenTick}></this.greenTickImg>
@@ -120,7 +131,7 @@ export class ProductDetails extends Component {
                                     <this.textSpan style={this.priceStyles}>4000 INR</this.textSpan>
                                 </div>
                         </this.childCont>
-                    </this.productCont>
+                    </this.productCont> */}
                  </this.parentCont>
                  <CTAComps nextStep = {this.props.nextStep} prevStep = {this.props.prevStep}/>
             </div>

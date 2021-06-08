@@ -7,7 +7,7 @@ export class Payment extends Component {
     paymentCont = styled.div`
         height: 400px;
         width: 80em;
-        margin: 200px 0 0 163px;
+        margin: 250px 0 0 200px;
         
         position: absolute;
     `;

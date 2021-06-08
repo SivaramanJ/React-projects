@@ -5,6 +5,7 @@ import PlanContainer from "./Components/PlansContainer";
 import CustomerDetails from "./Components/CustomerDetails";
 import ProductDetails from './Components/ProductDetails'
 import Payment from "./Components/Payment";
+import ProgressBarUtil from "./Components/progressBar";
 
 class Plans extends React.Component {
 
@@ -13,8 +14,9 @@ class Plans extends React.Component {
   }
 
   nextStep = () => {
-    console.log('Siva');
+    
     let { step } = this.state;
+    console.log('Siva' + step) ;
     this.setState({
       step: step + 1
     })
@@ -23,18 +25,20 @@ class Plans extends React.Component {
   prevStep = () => {
     let { step } = this.state;
     this.setState({
-      step: step - 1
+      step: step > 1 ? step - 1 : 1
     })
+    
   }
 
   render() {
     let { step } = this.state;
 
     switch(step) {
-      case 1:
+      default:
         return(
           <div className="plans">
             <Header className="headerClass" />
+            <ProgressBarUtil step = {this.state.step}></ProgressBarUtil>
             <PlanContainer nextStep = {this.nextStep} prevStep = {this.prevStep}/>
             <div className="plansBg"></div>
           </div>
@@ -44,6 +48,7 @@ class Plans extends React.Component {
         return (
           <div className="plans">
             <Header className="headerClass" />
+            <ProgressBarUtil step = {this.state.step}></ProgressBarUtil>
             <ProductDetails nextStep ={ this.nextStep} prevStep = {this.prevStep}/>
           </div>
         )
@@ -51,6 +56,7 @@ class Plans extends React.Component {
         return (
           <div className="plans">
             <Header className="headerClass" />
+            <ProgressBarUtil step = {this.state.step}></ProgressBarUtil>
             <CustomerDetails nextStep ={this.nextStep} prevStep = {this.prevStep}/>
             <div className="plansBg"></div>
           </div>
@@ -59,6 +65,7 @@ class Plans extends React.Component {
         return (
           <div className="plans">
             <Header className="headerClass" />
+            <ProgressBarUtil step = {this.state.step}></ProgressBarUtil>
             <Payment nextStep ={ this.nextStep} prevStep = {this.prevStep} />
             
           </div>

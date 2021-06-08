@@ -4,10 +4,12 @@ const MenubarData = [
     {
         title: 'Home',
         path: '/',
+        cName: 'home',
     },
     {
         title: 'Plans',
         path: '/plans',
+        cName: 'plans',
     },
     {
         title: 'Help',
