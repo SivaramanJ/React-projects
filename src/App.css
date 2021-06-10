@@ -314,4 +314,8 @@ input[type=date] {
   border-top: 1px solid rgba(196, 196, 196, 0.3);
 
 }
+.selectedProd {
+  border: 2px solid #a8ff63;
+  border-radius: 10px;
+}
 ul li:hover, li.home, li.plans { background-color: white;}

@@ -4,9 +4,13 @@ import Styled from 'styled-components';
 import CTAComps from './CTAComps';
 import productLogo from "../../public/Inboundlogo.svg"
 import greenTick from "../../public/greenTick.svg"
-import tick from "../../public/Tick.png"
+import tick1 from "../../public/tick1.png"
 import styled from 'styled-components';
 export class ProductDetails extends Component {
+
+    state = {
+        selected: false,
+    }
 
     productCont = Styled.div`
         width: 262px;
@@ -15,7 +19,7 @@ export class ProductDetails extends Component {
         padding-left: 2px;
         flex-direction: row;
         justify-content: center; 
-        position: relative;
+        position: relative;  
     `
     childCont = Styled.div`
         position: absolute;
@@ -30,7 +34,6 @@ export class ProductDetails extends Component {
         &:hover {
             box-shadow: 2px 9px 21px rgba(0, 0, 0, 0.2);
         }
-        
     `
     parentCont = Styled.div`
         display: flex;
@@ -68,19 +71,23 @@ export class ProductDetails extends Component {
     }
 
     selectedProduct = styled.img `
-         width: 54px;
-         height: 32px;
-        float: right;
-        margin: 10px 0 5px 0;
+         width: 32px;
+         height: 32px;    
     `
 
-
+    handleClick = () => {
+        let { selected } = this.state;
+        this.setState({
+            selected: !selected
+        })
+    }
     render() {
+        let { selected } = this.state;
         return (
             <div >
                 <this.parentCont >
-                    <this.productCont >  
-                        <this.childCont > 
+                    <this.productCont className={ selected ?  'selectedProd' : ''} >  
+                        <this.childCont onClick={this.handleClick} > 
                             <this.productImg src={productLogo} ></this.productImg> 
                             <br/>
                             <this.greenTickImg src={greenTick}></this.greenTickImg>
@@ -89,7 +96,7 @@ export class ProductDetails extends Component {
                             <this.textSpan>Trip Curtailment</this.textSpan><br/>
                             <div style={{marginTop: "45px",}}>
                                 <this.textSpan style={{paddingLeft: "22px"}}>Inbound India</this.textSpan><br/><br/>
-                                <this.textSpan style={this.priceStyles}>1500 INR</this.textSpan>
+                                <this.textSpan style={this.priceStyles}>2000 INR</this.textSpan>
                             </div>
                         </this.childCont>
                     </this.productCont>

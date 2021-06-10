@@ -34,7 +34,7 @@ const CTAComps = (props) => {
         <div style={styles.root}>
             {console.log(props)}
             <ButtonAnc as ="a" onClick={props.prevStep}>{'<   Back'}</ButtonAnc>
-            <Button style={styles.button} onClick={props.nextStep}>Next</Button>
+            <Button style={styles.button} onClick={props.nextStep}>{ props.name ? props.name : 'Next'}</Button>
         </div>
     )
     

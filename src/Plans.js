@@ -6,6 +6,7 @@ import CustomerDetails from "./Components/CustomerDetails";
 import ProductDetails from './Components/ProductDetails'
 import Payment from "./Components/Payment";
 import ProgressBarUtil from "./Components/progressBar";
+import SuccessPage from "./Components/SuccessPage";
 
 class Plans extends React.Component {
 
@@ -67,6 +68,14 @@ class Plans extends React.Component {
             <Header className="headerClass" />
             <ProgressBarUtil step = {this.state.step}></ProgressBarUtil>
             <Payment nextStep ={ this.nextStep} prevStep = {this.prevStep} />
+            
+          </div>
+        )
+      case 5:
+        return (
+          <div className="plans">
+            <Header className="headerClass" />
+            <SuccessPage />
             
           </div>
         )

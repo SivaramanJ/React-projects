@@ -8,7 +8,6 @@ export class Payment extends Component {
         height: 400px;
         width: 80em;
         margin: 250px 0 0 200px;
-        
         position: absolute;
     `;
 
@@ -177,7 +176,7 @@ export class Payment extends Component {
                                     <this.medP> 10% Online Payment Tax</this.medP>
                                 </td>
                                 <td>
-                                    <this.medP style={this.priceStyles}>3 </this.medP>
+                                    <this.medP style={this.priceStyles}>200 </this.medP>
                                 </td>
                             </tr>
                             <tr >
@@ -185,15 +184,15 @@ export class Payment extends Component {
                                     <this.medP>5% Online Payment Tax</this.medP>
                                 </td>
                                 <td>
-                                    <this.medP style={this.priceStyles}>2 </this.medP> 
+                                    <this.medP style={this.priceStyles}>100 </this.medP> 
                                 </td>
                             </tr>
                             <tr class="borderTop">
                             <td style={this.tdStyles}>
-                                    <this.largeP>TOTAL</this.largeP>
+                                    <this.largeP>TOTAL (INR)</this.largeP>
                                 </td>
                                 <td>
-                                    <this.largeP style={this.priceStyles}>2005 </this.largeP> 
+                                    <this.largeP style={this.priceStyles}>2300 </this.largeP> 
                                 </td>
                             </tr>
                         </this.taxTable>
@@ -236,7 +235,7 @@ export class Payment extends Component {
                         
                     </this.cardSection>
                 </this.paymentCont>
-                <CTAComps nextStep = {this.props.nextStep} prevStep = {this.props.prevStep}/>
+                <CTAComps nextStep = {this.props.nextStep} prevStep = {this.props.prevStep} name ="Pay Now"/>
             </div>
         )
     }
