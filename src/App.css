@@ -31,7 +31,7 @@ html, body {
   color: #000000;
 }
 .nav-menu  ul {
-  padding-left: 80%;
+  padding-left: 70%;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -45,13 +45,13 @@ html, body {
 }
 
 .nav-menu ul > li  a {
+  text-decoration: unset;
   font-family: Oswald;
   font-style: normal;
+  font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  text-decoration: unset;
-  color: #000000;
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .bodyTitle {
@@ -318,4 +318,13 @@ input[type=date] {
   border: 2px solid #a8ff63;
   border-radius: 10px;
 }
-ul li:hover, li.home, li.plans { background-color: white;}
+
+
+.home li.home span,
+.plans li.plans span{ 
+  font-family: Oswald;
+  font-style: normal;
+  font-size: 20px;
+  color: rgba(108, 99, 255, 1);
+  font-weight: bold;
+}

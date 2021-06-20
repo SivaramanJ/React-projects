@@ -107,6 +107,8 @@ export class Payment extends Component {
         } 
         p.cardNum {
             padding-top: 40px;
+            font-size: larger !important;
+
         }
         div.backSide {
             margin-left:230px;

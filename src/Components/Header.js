@@ -2,6 +2,7 @@
 import React from "react";
 import MenubarData from './MenubarData';
 import { Link } from 'react-router-dom';
+import  UserIcon from "../../public/UserIcon.svg";
 
 const Header = () => {
 
@@ -15,6 +16,7 @@ const Header = () => {
                     return (
                         <li key={index} className={item.cName}>
                             <Link to={item.path}>
+                                {item.icon && <img src={UserIcon} style={{marginRight: "10px"}}/>}
                                 <span>{item.title}</span>
                             </Link>
                         </li>

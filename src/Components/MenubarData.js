@@ -16,8 +16,9 @@ const MenubarData = [
         path: '/help',
     },
     {
-        title: 'Login',
+        title: 'John',
         path: '/login',
+        icon: true
     }
 ]
 export default MenubarData;

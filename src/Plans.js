@@ -7,11 +7,13 @@ import ProductDetails from './Components/ProductDetails'
 import Payment from "./Components/Payment";
 import ProgressBarUtil from "./Components/progressBar";
 import SuccessPage from "./Components/SuccessPage";
+import Loader from "react-loader-spinner";
 
 class Plans extends React.Component {
 
   state = {
-    step: 1
+    step: 1,
+    loading: true, 
   }
 
   nextStep = () => {
@@ -19,7 +21,8 @@ class Plans extends React.Component {
     let { step } = this.state;
     console.log('Siva' + step) ;
     this.setState({
-      step: step + 1
+      step: step + 1,
+      loading: true,
     })
   }
 
@@ -31,19 +34,38 @@ class Plans extends React.Component {
     
   }
 
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({
+        loading: false
+      })
+    }, 1000);
+  }
+
   render() {
-    let { step } = this.state;
+    let { step, loading} = this.state;
 
     switch(step) {
       default:
-        return(
-          <div className="plans">
-            <Header className="headerClass" />
-            <ProgressBarUtil step = {this.state.step}></ProgressBarUtil>
-            <PlanContainer nextStep = {this.nextStep} prevStep = {this.prevStep}/>
-            <div className="plansBg"></div>
-          </div>
-        );
+        if (loading) {
+          return <Loader
+              type="Puff"
+              color="#6C63FF"
+              height={100}
+              width={100}
+              style={{ position: 'fixed' , top: "40%", left: "46%"}}
+          />
+        }
+        else {
+          return(
+            <div className="plans">
+              <Header className="headerClass" />
+              <ProgressBarUtil step = {this.state.step}></ProgressBarUtil>
+              <PlanContainer nextStep = {this.nextStep} prevStep = {this.prevStep}/>
+              <div className="plansBg"></div>
+            </div>
+          );
+        }
       
       case 2: 
         return (

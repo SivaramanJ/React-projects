@@ -17,7 +17,7 @@ const InsuranceCard = (props) => {
             <div className ={props.className} style={styles}>
                 <Link to='/plans' >
                     <div>
-                        <p className="subText">Travel to dubai</p>
+                        <p className="subText">Travel to India</p>
                         {props.type === 'Inbound' ? <img className="typeLogo" src={Inboundlogo} alt=" " ></img> : <img className="typeLogo" src={Outboundlogo} alt=" " ></img> }
                         <p className="type">{props.type}</p>
                         
